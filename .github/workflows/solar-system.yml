@@ -95,7 +95,8 @@ jobs:
             name: Code-Coverage-Result
             path: coverage
             retention-days: 5
-
+            overwrite: true
+            
     reports-s3:
       needs: [code-coverage, unit-testing]
       name: AWS S3 - Upload Reports
@@ -256,4 +257,5 @@ jobs:
         #  SLACK_ICON: https://gitlab.com/sidd-harth/solar-system/-/raw/main/images/saturn.png
           SLACK_MESSAGE: ':hammer_and_wrench: Triggered by ${{github.actor}}'
           SLACK_TITLE: Information
+
 
