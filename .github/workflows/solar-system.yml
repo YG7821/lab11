@@ -56,6 +56,7 @@ jobs:
           with:
             name: Mocha-Test-Result
             path: test-results.xml
+            overwrite: true
 
     code-coverage:
         name: Code Coverage
@@ -257,5 +258,6 @@ jobs:
         #  SLACK_ICON: https://gitlab.com/sidd-harth/solar-system/-/raw/main/images/saturn.png
           SLACK_MESSAGE: ':hammer_and_wrench: Triggered by ${{github.actor}}'
           SLACK_TITLE: Information
+
 
 
